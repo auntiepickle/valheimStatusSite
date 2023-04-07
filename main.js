@@ -22,7 +22,7 @@ async function getJSONData() {
 
 function updateHTMLStatus(){
     console.log(currentStatus);
-    elementbyIdUpdate(HTMLTAGS.STATUSDUMP, currentStatus); 
+    elementbyIdUpdate(HTMLTAGS.STATUSDUMP, JSON.stringify(currentStatus)); 
     elementbyIdUpdate(HTMLTAGS.SERVERNAME, currentStatus.server_name);
     elementbyIdUpdate(HTMLTAGS.PLAYERSONLINE, currentStatus.player_count);
     //elementbyIdUpdate(STATUSDUMP, currentStatus);
