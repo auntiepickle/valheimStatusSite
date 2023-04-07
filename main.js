@@ -27,11 +27,11 @@ async function getJSONData() {
 
 function updateHTMLStatus(){
     console.log(currentStatus);    
-    if(currentStatus.error != 'null'){             //server offline  
-        elementbyIdUpdate(HTMLTAGS.SERVERSTATUS, '<span class="offline">Offline</span>'); 
+    if(currentStatus.error != null){             //server offline  
+        elementbyIdUpdate(HTMLTAGS.SERVERSTATUS, '<span class="offline">Server Offline</span>'); 
     }
     else{            
-        elementbyIdUpdate(HTMLTAGS.SERVERSTATUS, '<span class="online">Offline</span>');
+        elementbyIdUpdate(HTMLTAGS.SERVERSTATUS, '<span class="online">Online</span>');
         elementbyIdUpdate(HTMLTAGS.STATUSDUMP, JSON.stringify(currentStatus)); 
         elementbyIdUpdate(HTMLTAGS.SERVERNAME, currentStatus.server_name);
         elementbyIdUpdate(HTMLTAGS.PLAYERSONLINE, "<span class='tag'>Players online: </span>"  + currentStatus.player_count);
