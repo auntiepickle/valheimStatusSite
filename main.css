@@ -51,7 +51,8 @@ span.online{
   .content {
     padding: 0 18px;
     display: none;
-    overflow: hidden;
+    overflow: visible;
+    box-sizing: border-box;
     background-color: #f1f1f1;
   }
 
@@ -62,4 +63,8 @@ span.online{
 
   #statusContainer{
     font-size: x-large;
+  }
+
+  #dumpStatus{
+    overflow-wrap: anywhere;
   }
