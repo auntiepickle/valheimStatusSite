@@ -6,6 +6,10 @@ span.tag{
     font-weight: bold;
 }
 
+h1{
+    margin:0px;
+}
+
 button{
     font-family: 'Skranji', cursive;
 }
@@ -16,8 +20,12 @@ span.offline{
 }
 
 span.online{
-    color:greenyellow;    
+    color:limegreen;    
     font-size:small;
+}
+
+#serverStatus{
+    margin: top 0.2em;
 }
 
 /* Style the button that is used to open and close the collapsible content */
