@@ -67,4 +67,5 @@ span.online{
 
   #dumpStatus{
     overflow-wrap: anywhere;
+    margin:0px;
   }
