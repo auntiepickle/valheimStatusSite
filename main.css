@@ -8,6 +8,7 @@ span.tag{
 
 h1{
     margin:0px;
+    font-size: xx-large;
 }
 
 button{
@@ -57,4 +58,8 @@ span.online{
   #debugStatements{
     position: absolute;
     bottom: 1px;
+  }
+
+  #statusContainer{
+    font-size: larger;
   }
