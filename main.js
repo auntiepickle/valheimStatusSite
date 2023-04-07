@@ -1,14 +1,18 @@
-var url = ""
+var url = "./"
+var currentStatus = undefined;
 
 async function getJSONData() {
     fetchUrl = url + "status.json";
     const response = await fetch(fetchUrl);
     const jsonData = await response.json();
-    document.getElementById("dumpStatus").innerHTML = JSON.stringify(jsonData)
+    currentStatus = jsonData;
   }
 
   async function init(){
-    getJSONData();
+   await getJSONData().then(function(data){
+    document.getElementById("dumpStatus").innerHTML = JSON.stringify(jsonData);    
+    console.log(jsonData);
+   });
   }
 
 init();
