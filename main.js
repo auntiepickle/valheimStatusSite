@@ -10,7 +10,7 @@ async function getJSONData() {
 
   async function init(){
    await getJSONData().then(function(data){
-    document.getElementById("dumpStatus").innerHTML = JSON.stringify(jsonData);    
+    document.getElementById("dumpStatus").innerHTML = JSON.stringify(data);    
     console.log(data);
    });
   }
