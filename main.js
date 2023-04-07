@@ -11,7 +11,7 @@ async function getJSONData() {
   async function init(){
    await getJSONData().then(function(data){
     document.getElementById("dumpStatus").innerHTML = JSON.stringify(jsonData);    
-    console.log(jsonData);
+    console.log(data);
    });
   }
 
