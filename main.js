@@ -21,7 +21,6 @@ async function getJSONData() {
 
   async function init(){
    await getJSONData();
-   updateHTMLStatus();
   }
 
 function updateHTMLStatus(){
