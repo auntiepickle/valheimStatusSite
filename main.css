@@ -42,34 +42,34 @@ span.online{
     font-size: 15px;
   }
   
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active, .collapsible:hover {
-    background-color: #ccc;
-  }
-  
-  /* Style the collapsible content. Note: hidden by default */
-  .content {
-    padding: 0 18px;
-    display: none;
-    overflow: visible;
-    box-sizing: border-box;
-    background-color: #f1f1f1;
-  }
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+background-color: #ccc;
+}
 
-  #debugStatements{
-    position: absolute;
-    bottom: 1px;
-  }
+/* Style the collapsible content. Note: hidden by default */
+.content {
+padding: 0 18px;
+display: none;
+overflow: visible;
+box-sizing: border-box;
+background-color: #f1f1f1;
+}
 
-  #statusContainer{
-    font-size: x-large;
-  }
+#debugStatements{
+position: absolute;
+bottom: 1px;
+}
 
-  #dumpStatus{
-    overflow-wrap: anywhere;
-    margin:0px;
-  }
+#statusContainer{
+font-size: x-large;
+}
 
-  iframe{
-    width:100%;
-  }
+#dumpStatus{
+overflow-wrap: anywhere;
+margin:0px;
+}
+
+iframe{
+    width:100% !important;
+}
