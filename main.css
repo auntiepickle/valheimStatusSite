@@ -69,3 +69,7 @@ span.online{
     overflow-wrap: anywhere;
     margin:0px;
   }
+
+  pre{
+    color:red;
+  }
