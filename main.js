@@ -12,7 +12,7 @@ async function getJSONData() {
     const response = await fetch(fetchUrl);
     const jsonData = await response.json();
     
-    if (_.isEqual(currentStatus, jsonData))
+    if (!_.isEqual(currentStatus, jsonData))
     {
         currentStatus = jsonData;
         updateHTMLStatus();
