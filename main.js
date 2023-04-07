@@ -1,5 +1,12 @@
 var url = "./"
 var currentStatus = undefined;
+const HTMLTAGS = {
+    SERVERSTATUS: "ServerStatus",
+    SERVERNAME: "ServerName",
+    PLAYERSONLINE: "PlayersOnline",
+    PLAYERSCONTAINER: "PlayersContainer",
+    STATUSDUMP: "dumpStatus"
+}
 
 async function getJSONData() {
     fetchUrl = url + "status.json";
@@ -14,8 +21,15 @@ async function getJSONData() {
   }
 
 function updateHTMLStatus(){
-    document.getElementById("dumpStatus").innerHTML = JSON.stringify(currentStatus);    
     console.log(currentStatus);
+    elementbyIdUpdate(HTMLTAGS.STATUSDUMP, currentStatus); 
+    elementbyIdUpdate(HTMLTAGS.SERVERNAME, currentStatus.server_name);
+    elementbyIdUpdate(HTMLTAGS.PLAYERSONLINE, currentStatus.player_count);
+    elementbyIdUpdate(STATUSDUMP, currentStatus);
+}
+
+function elementbyIdUpdate(el, html){
+    document.getElementById(el).innerHTML = html;
 }
 
 init();
