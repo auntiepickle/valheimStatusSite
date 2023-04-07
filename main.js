@@ -22,7 +22,8 @@ async function getJSONData() {
 
   async function init(){
    createCollapsible();
-   await getJSONData();
+   //await getJSONData();
+   beginFetchLoop();
   }
 
 function updateHTMLStatus(){
@@ -40,6 +41,10 @@ function updateHTMLStatus(){
 
 function elementbyIdUpdate(el, html){
     document.getElementById(el).innerHTML = html;
+}
+
+function beginFetchLoop(){
+    setInterval(getJSONData, 2000);
 }
 
 function createCollapsible(){
