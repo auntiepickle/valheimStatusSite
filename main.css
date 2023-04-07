@@ -6,6 +6,9 @@ span.tag{
     font-weight: bold;
 }
 
+button{
+    font-family: 'Skranji', cursive;
+}
 
 /* Style the button that is used to open and close the collapsible content */
 .collapsible {
