@@ -11,9 +11,6 @@ async function getJSONData() {
     fetchUrl = url + "status.json";
     const response = await fetch(fetchUrl);
     const jsonData = await response.json();
-
-    var anObj = JSON.parse(jsonString1);
-    var anotherObj= JSON.parse(jsonString2);
     
     if (_.isEqual(currentStatus, jsonData))
     {
