@@ -25,7 +25,7 @@ function updateHTMLStatus(){
     elementbyIdUpdate(HTMLTAGS.STATUSDUMP, currentStatus); 
     elementbyIdUpdate(HTMLTAGS.SERVERNAME, currentStatus.server_name);
     elementbyIdUpdate(HTMLTAGS.PLAYERSONLINE, currentStatus.player_count);
-    elementbyIdUpdate(STATUSDUMP, currentStatus);
+    //elementbyIdUpdate(STATUSDUMP, currentStatus);
 }
 
 function elementbyIdUpdate(el, html){
