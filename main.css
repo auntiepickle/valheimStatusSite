@@ -8,7 +8,7 @@ span.tag{
 
 h1{
     margin:0px;
-    font-size: xx-large;
+    font-size: xxx-large;
 }
 
 button{
@@ -17,12 +17,12 @@ button{
 
 span.offline{
     color:red;
-    font-size:xx-large;
+    font-size:xxx-large;
 }
 
 span.online{
     color:limegreen;    
-    font-size:small;
+    font-size:medium;
 }
 
 #serverStatus{
@@ -61,5 +61,5 @@ span.online{
   }
 
   #statusContainer{
-    font-size: larger;
+    font-size: x-large;
   }
