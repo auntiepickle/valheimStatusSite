@@ -70,6 +70,6 @@ span.online{
     margin:0px;
   }
 
-  pre{
-    color:red;
+  iframe{
+    width:100%;
   }
