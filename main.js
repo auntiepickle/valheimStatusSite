@@ -9,10 +9,13 @@ async function getJSONData() {
   }
 
   async function init(){
-   await getJSONData().then(function(data){
-    document.getElementById("dumpStatus").innerHTML = JSON.stringify(data);    
-    console.log(data);
-   });
+   await getJSONData();
+   updateHTMLStatus();
   }
+
+function updateHTMLStatus(){
+    document.getElementById("dumpStatus").innerHTML = JSON.stringify(currentStatus);    
+    console.log(currentStatus);
+}
 
 init();
