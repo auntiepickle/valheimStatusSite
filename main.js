@@ -7,24 +7,6 @@ const HTMLTAGS = {
     PLAYERSCONTAINER: "PlayersContainer",
     STATUSDUMP: "dumpStatus"
 }
-
-
-Object.extend(Object, {
-    deepEquals: function(o1, o2) {
-      var k1 = Object.keys(o1).sort();
-      var k2 = Object.keys(o2).sort();
-      if (k1.length != k2.length) return false;
-      return k1.zip(k2, function(keyPair) {
-        if(typeof o1[keyPair[0]] == typeof o2[keyPair[1]] == "object"){
-          return deepEquals(o1[keyPair[0]], o2[keyPair[1]])
-        } else {
-          return o1[keyPair[0]] == o2[keyPair[1]];
-        }
-      }).all();
-    }
- });
-
-
 async function getJSONData() {
     fetchUrl = url + "status.json";
     const response = await fetch(fetchUrl);
@@ -33,7 +15,7 @@ async function getJSONData() {
     var anObj = JSON.parse(jsonString1);
     var anotherObj= JSON.parse(jsonString2);
     
-    if (Object.deepEquals(currentStatus, jsonData))
+    if (_.isEqual(currentStatus, jsonData))
     {
         currentStatus = jsonData;
         updateHTMLStatus();
