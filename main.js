@@ -14,7 +14,7 @@ async function getJSONData() {
     
     if (!_.isEqual(currentStatus, jsonData))
     {
-        console.log('new data pulled... updating')
+        //console.log('new data pulled... updating')
         currentStatus = jsonData;
         updateHTMLStatus();
     }
@@ -27,7 +27,7 @@ async function getJSONData() {
   }
 
 function updateHTMLStatus(){
-    console.log(currentStatus);    
+    //console.log(currentStatus);    
     if(currentStatus.error != null){             //server offline  
         elementbyIdUpdate(HTMLTAGS.SERVERSTATUS, '<span class="offline">Server Offline</span>'); 
     }
