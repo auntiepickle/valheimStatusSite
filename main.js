@@ -14,6 +14,7 @@ async function getJSONData() {
     
     if (!_.isEqual(currentStatus, jsonData))
     {
+        console.log('new data pulled... updating')
         currentStatus = jsonData;
         updateHTMLStatus();
     }
